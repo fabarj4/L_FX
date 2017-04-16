@@ -29,7 +29,7 @@ public class homeController implements Initializable {
      */
     
     @FXML
-    private Button b_fauna,b_flora;
+    private Button b_fauna, b_flora, b_sejarah, b_fasilitas;
     
     
     @FXML
@@ -39,16 +39,20 @@ public class homeController implements Initializable {
         Parent root = null;
         
         if(event.getSource() == b_fauna){
-            System.out.println("Fauna");
             stage = (Stage)b_fauna.getScene().getWindow();
             root = FXMLLoader.load(getClass().getResource("/view/v_fauna.fxml"));
         }else if(event.getSource() == b_flora){
             FXMLLoader ff = new FXMLLoader(getClass().getResource("/view/v_itemff.fxml"));
             stage = (Stage)b_flora.getScene().getWindow();
-            ff.setController(new itemffController(0,1));
+            ff.setController(new itemffController(1));
             root = ff.load();
-        }
-        else{
+        }else if(event.getSource() == b_sejarah){
+            stage = (Stage)b_sejarah.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("/view/v_sejarah.fxml"));
+        }else if(event.getSource() == b_fasilitas){
+            stage = (Stage)b_sejarah.getScene().getWindow();
+            root = FXMLLoader.load(getClass().getResource("/view/v_fasilitas.fxml"));
+        }else{
             System.out.println("lala");
         }
         Scene scene = new Scene(root);

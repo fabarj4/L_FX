@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -26,7 +28,7 @@
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="149.0" prefHeight="249.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="336.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
+            <ImageView fx:id="foto" fitHeight="336.0" fitWidth="298.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
             <Label fx:id="v_nama" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="NAMA" GridPane.columnSpan="3">
                <font>
                   <Font size="41.0" />
@@ -35,7 +37,7 @@
                   <Insets top="5.0" />
                </GridPane.margin>
             </Label>
-            <JFXTextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="RingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasanRingkasan" GridPane.columnSpan="3" GridPane.rowIndex="1">
+            <JFXTextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="COBA DULU" GridPane.columnSpan="3" GridPane.rowIndex="1">
                <font>
                   <Font size="22.0" />
                </font>
@@ -137,4 +139,18 @@
          </children>
       </GridPane>
    </center>
+   <bottom>
+      <JFXButton fx:id="b_back" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" text="Kembali" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </bottom>
 </BorderPane>

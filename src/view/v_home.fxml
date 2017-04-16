@@ -34,7 +34,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/paw-print%20(1).png" />
+                        <Image url="@../image/pawprint.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -46,7 +46,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/tree-icon--free-vector-downloa.png" />
+                        <Image url="@../image/tree.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -58,7 +58,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/maps-icon-8225%20(1).png" />
+                        <Image url="@../image/street-map.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -66,11 +66,11 @@
                   <Font size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Sejarah" GridPane.rowIndex="1">
+            <JFXButton fx:id="b_sejarah" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Sejarah" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/55076-200.png" />
+                        <Image url="@../image/bank.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -78,11 +78,11 @@
                   <Font size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Fasilitas" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <JFXButton fx:id="b_fasilitas" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Fasilitas" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/help.png" />
+                        <Image url="@../image/park_1.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -94,7 +94,7 @@
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../image/help.png" />
+                        <Image url="@../image/info.png" />
                      </image>
                   </ImageView>
                </graphic>

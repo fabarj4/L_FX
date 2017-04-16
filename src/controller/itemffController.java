@@ -41,7 +41,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import lib.koneksi;
-import lib.listAdapter;
+import lib.listAdapter_fauna;
+import lib.listAdapter_flora;
 import model.m_fauna;
 import model.m_flora;
 
@@ -63,12 +64,18 @@ public class itemffController implements Initializable {
     
     ObservableList observableList = FXCollections.observableArrayList();
     
-    private ObservableList<m_fauna> data;
+    private ObservableList<m_fauna> data_fauna;
+    private ObservableList<m_flora> data_flora;
     private koneksi kon;
     
     private int jenis,tipe;
     private String jenis_txt;
+    
+    
 
+    public itemffController(int tipe) {
+        this.tipe = tipe;
+    }
     public itemffController(int jenis,int tipe) {
         this.jenis = jenis;
         this.tipe = tipe;
@@ -80,10 +87,10 @@ public class itemffController implements Initializable {
         kon = new koneksi();
         try {
             getData();
-            listView.setItems(data);
             //listView.setExpanded(true);
             listView.setOrientation(Orientation.HORIZONTAL);
             if(tipe == 0){
+                listView.setItems(data_fauna);
                 switch(jenis){
                     case 0:
                         jenis_txt = "Mamalia";
@@ -98,15 +105,15 @@ public class itemffController implements Initializable {
                         jenis_txt = "Pieces";
                         break;
                 }
-                
+                listView.setCellFactory(itemListView -> new listAdapter_fauna());
                 listView.getSelectionModel().selectedItemProperty().addListener(
                     new ChangeListener<m_fauna>(){
                         @Override
                         public void changed(ObservableValue<? extends m_fauna> observable, m_fauna oldValue, m_fauna newValue) {
                             try {  
                                 FXMLLoader ffDetail = new FXMLLoader(getClass().getResource("/view/v_itemffDetail.fxml"));
-                                stage = (Stage)b_back.getScene().getWindow();
-                                ffDetail.setController(new itemffDetailController(newValue.getNama(),newValue.getMakanan(),newValue.getHabitat()));
+                                stage = (Stage)b_back.getScene().getWindow(); //nama,ringkasan,makanan,habitat,lama_hidup,penyebaran,foto,jumlah
+                                ffDetail.setController(new itemffDetailController(newValue.getNama(),newValue.getRingkasan(),newValue.getMakanan(),newValue.getHabitat(),newValue.getLamaHidup(),newValue.getPenyebaran(),newValue.getFoto(),newValue.getJumlah(),jenis,tipe));
                                 root = ffDetail.load();
                             } catch (IOException ex) {
                                 Logger.getLogger(itemffController.class.getName()).log(Level.SEVERE, null, ex);
@@ -119,7 +126,9 @@ public class itemffController implements Initializable {
                     }
                 );
             }else{
+                listView.setItems(data_flora);
                 jenis_txt = "Flora";
+                listView.setCellFactory(itemListView -> new listAdapter_flora());
                 listView.getSelectionModel().selectedItemProperty().addListener(
                     new ChangeListener<m_flora>(){
                         @Override
@@ -127,7 +136,7 @@ public class itemffController implements Initializable {
                             try {  
                                 FXMLLoader ffDetail = new FXMLLoader(getClass().getResource("/view/v_itemffDetail.fxml"));
                                 stage = (Stage)b_back.getScene().getWindow();
-                                //ffDetail.setController(new itemffDetailController(newValue.getNama(),newValue.getMakanan(),newValue.getHabitat()));
+                                ffDetail.setController(new itemffDetailController(newValue.getNama(),newValue.getTinggi(),newValue.getRingkasan(),newValue.getFoto(),jenis,tipe));
                                 root = ffDetail.load();
                             } catch (IOException ex) {
                                 Logger.getLogger(itemffController.class.getName()).log(Level.SEVERE, null, ex);
@@ -141,7 +150,6 @@ public class itemffController implements Initializable {
                 );
             }
             title.setText(jenis_txt);
-            listView.setCellFactory(itemListView -> new listAdapter());
         } catch (FileNotFoundException ex) {
             Logger.getLogger(itemffController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -171,21 +179,25 @@ public class itemffController implements Initializable {
     private void getData() throws FileNotFoundException{
         try {
             Connection con = kon.Connect();
-            data = FXCollections.observableArrayList();
+            data_fauna = FXCollections.observableArrayList();
+            data_flora = FXCollections.observableArrayList();
             ResultSet rs = null;
             switch(tipe){
                 case 0:
-                    rs = con.createStatement().executeQuery("select * from fauna where jenis = '"+jenis+"'");
+                    rs = con.createStatement().executeQuery("select nama,ringkasan,makanan,habitat,lama_hidup,penyebaran,foto,jumlah from fauna where id_tipefauna = '"+jenis+"'");
                     while(rs.next()){
-                        data.add(new m_fauna(rs.getString(1),rs.getString(2),rs.getString(3)));
+                        data_fauna.add(new m_fauna(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)));
                     }
                     break;
                 case 1:
-                    rs = con.createStatement().executeQuery("select * from flora");
+                    rs = con.createStatement().executeQuery("select nama,tinggi,ringkasan,foto from flora");
+                    while(rs.next()){
+                        data_flora.add(new m_flora(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4)));
+                    }
                     break;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(faunaExpandController.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(faunaExpandController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

@@ -17,27 +17,34 @@ public class m_flora {
    private final StringProperty nama;
    private final StringProperty tinggi;
    private final StringProperty ringkasan;
+   private final StringProperty foto;
 
-    public m_flora(String nama, String tinggi, String ringkasan) {
+    public m_flora(String nama, String tinggi, String ringkasan,String foto) {
         this.nama = new SimpleStringProperty(nama);
         this.tinggi = new SimpleStringProperty(tinggi);
         this.ringkasan = new SimpleStringProperty(ringkasan);
+        this.foto = new SimpleStringProperty(foto);
     }
     
     public StringProperty namaProperty() {return nama;}
     public StringProperty tinggiProperty() {return tinggi;}
     public StringProperty ringkasanProperty() {return ringkasan;}
+    public StringProperty fotoProperty(){return foto;}
     
-    public StringProperty getNama() {
-        return nama;
+    public String getNama() {
+        return nama.get();
     }
 
-    public StringProperty getTinggi() {
-        return tinggi;
+    public String getTinggi() {
+        return tinggi.get();
     }
 
-    public StringProperty getRingkasan() {
-        return ringkasan;
+    public String getRingkasan() {
+        return ringkasan.get();
+    }
+    
+    public String getFoto(){
+        return foto.get();
     }
     
     public void setNama(String value){
@@ -50,5 +57,9 @@ public class m_flora {
     
     public void setRingkasan(String value){
         ringkasan.set(value);
+    }
+    
+    public void setFoto(String value){
+        foto.set(value);
     }
 }

@@ -13,7 +13,7 @@ public class koneksi {
     
     public Connection Connect(){
         try {
-            String url="jdbc:mysql://localhost:3306/project"; //url database
+            String url="jdbc:mysql://localhost:3306/ragunan"; //url database
             String user="root"; //user database
             String pass=""; //password database
             Class.forName("com.mysql.jdbc.Driver");
