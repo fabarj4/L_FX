@@ -54,7 +54,7 @@
                   <Font size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Map" GridPane.columnIndex="2">
+            <JFXButton fx:id="b_peta" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" prefHeight="383.0" prefWidth="0.0" ripplerFill="#5ad05e" text="Peta" GridPane.columnIndex="2">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>

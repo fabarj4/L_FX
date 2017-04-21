@@ -33,7 +33,7 @@ public class m_fauna {
     public StringProperty fotoProperty(){return foto;}
     public StringProperty jumlahProperty(){return jumlah;}
 
-    public m_fauna(String nama, String makanan, String habitat, String ringkasan,String lama_hidup,String penyebaran,String foto,String jumlah) {
+    public m_fauna(String nama, String ringkasan, String makanan, String habitat,String lama_hidup,String penyebaran,String foto,String jumlah) {
         this.nama = new SimpleStringProperty(nama);
         this.ringkasan = new SimpleStringProperty(ringkasan);
         this.makanan = new SimpleStringProperty(makanan);

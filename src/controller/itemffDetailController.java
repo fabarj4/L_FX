@@ -25,6 +25,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
@@ -49,12 +50,13 @@ public class itemffDetailController implements Initializable {
     koneksi kon;
     private ObservableList<m_fauna> data;
     
-    @FXML private Label v_nama,v_makanan,v_habitat;
+    @FXML private Label v_nama,v_makanan,v_makanan_title,v_habitat,v_habitat_title,v_tahun,v_tahun_title,v_tahun_ket,v_penyebaran,v_penyebaran_title,v_jumlah,v_jumlah_title,v_jumlah_ket;
     @FXML private JFXButton b_back; 
+    @FXML private TextArea v_keterangan;
     @FXML private ImageView foto;
 
     //untuk menampilkan flora
-    public itemffDetailController(String nama, String ringkasan, String photo, String tinggi, int jenis, int tipe) {
+    public itemffDetailController(String nama, String tinggi, String ringkasan, String photo,  int jenis, int tipe) {
         this.nama = nama;
         this.ringkasan = ringkasan;
         this.photo = photo;
@@ -83,8 +85,27 @@ public class itemffDetailController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         kon = new koneksi();
         v_nama.setText(nama.toUpperCase());
-        v_makanan.setText(makanan);
-        v_habitat.setText(habitat);
+        v_keterangan.setText(ringkasan);
+        if(tipe == 0){
+            v_makanan.setText(makanan);
+            v_habitat.setText(habitat);
+            v_tahun.setText(lama_hidup);
+            v_penyebaran.setText(penyebaran);
+            v_jumlah.setText(jumlah);
+        }else{
+            v_tahun_title.setText("Tinggi");
+            v_tahun.setText(tinggi);
+            v_tahun_ket.setText("CM");
+            v_habitat_title.setVisible(false);
+            v_habitat.setVisible(false);
+            v_makanan_title.setVisible(false);
+            v_makanan.setVisible(false);
+            v_penyebaran_title.setVisible(false);
+            v_penyebaran.setVisible(false);
+            v_jumlah_title.setVisible(false);
+            v_jumlah.setVisible(false);
+            v_jumlah_ket.setVisible(false);
+        }
         String imgSrc = "http://localhost/java/image/"+photo;
         File file = new File("d:/c.jpg");
         Image image = new Image(imgSrc);

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.pusatprimataController">
+    <bottom>
+      <JFXButton fx:id="b_back" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#handleButtonAction" text="Kembali" BorderPane.alignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </bottom>
+   <center>
+      <TextArea editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Pusat Primata Schmutzer adalah salah satu pusat primata berkelas internasional yang mempunyai peranan dalam konservasi primata Indonesia dan sekaligus sebagai Jendela Informasi Primata. Berbagai jenis primata Indonesia terwakili di sini dengan beberapa primata eksotisnya antara lain: orangutan, gorilla, simpanse, dan jenis-jenis primata langka dari dalam dan luar negeri lainnya. Kompleks seluas 13 ha dirancang dengan konsep open zoo dimana satwa yang tinggal di dalamnya seolah-olah berada di habitat aslinya. &#10;&#10;Memasuki area pusat Primata Schmutzer anda akan melihat sebuah enklosur yang tertata secara menarik dan artistik. Koleksi satwa yang menjadi andalan adalah dari jenis primata dengan icon orangutan dan gorilla. Pintu gerbangnya berbentuk setengah lingkaran menyerupai kubah raksasa dengan tangga menuju ke jembatan yang merupakan salah satu cara melihat gorilla dataran rendah dari atas jembatan tersebut. &#10;&#10;Selanjutnya apabila pengunjung ingin melihat orangutan akan dapat melihatnya melalui terowongan orangutan ( orangutan tunnel ) di dalam terowongan. Dari atas jembatan anda dapat mengamati gorilla. Yang merupakan salah satu jenis kera terbesar di dunia. Berat tubuhnya mencapai lebih dari 100 kg. Pada jam 12 siang pengunjung dapat menyaksikan petugas memberikan makanan (feeding time) gorilla. Atraksi ini sangat menarik dan karena pengunjunga bisa melihat secara langsung bagaimana gorilla yang pemalu ini makan. &#10;&#10;Selanjutnya apabila pengunjung ingin melihat orangutan akan dapat melihatnya melalui terowongan orangutan ( orangutan tunnel ) di dalam terowongan. Selain melihat satwa primata, anda dapat mempelajari kehidupan primata melalui beberapa fasilitas yang ada di dalam pusat primata schmutzer antara lain : dapur makanan satwa, fasilitas pendidikan dengan adanya ruang teater pemutaran film dokumenter, diorama satwa serta perpustakaan. Tiket masuk Pusat Primata Schmutzer adalah (selasa-jumat : Rp.6.000,-) dan (sabtu-minggu dan hari libur nasional : Rp.7500,-). Apabila anda ingin menyaksikan film dokumenter Primata anda dikenakan biaya Rp. 150.000 untuk sekali putar dengan kapasitas tempat duduk 85 kursi.&#10;&#10; " wrapText="true" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextArea>
+   </center>
+   <right>
+      <ImageView fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../image/smutzer2.jpg" />
+         </image>
+      </ImageView>
+   </right>
+   <top>
+      <Label text="Pusat Primata Schmotzer" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+   </top>
+</BorderPane>

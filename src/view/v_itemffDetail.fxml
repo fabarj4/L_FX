@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -37,14 +37,6 @@
                   <Insets top="5.0" />
                </GridPane.margin>
             </Label>
-            <JFXTextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="COBA DULU" GridPane.columnSpan="3" GridPane.rowIndex="1">
-               <font>
-                  <Font size="22.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets top="5.0" />
-               </GridPane.margin>
-            </JFXTextArea>
             <GridPane GridPane.columnSpan="4" GridPane.rowIndex="3">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
@@ -59,7 +51,7 @@
                 <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label fx:id="v_makanan" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" textAlignment="CENTER" GridPane.rowIndex="2">
+                  <Label fx:id="v_tahun_ket" alignment="CENTER" maxWidth="1.7976931348623157E308" text="TAHUN" textAlignment="CENTER" GridPane.rowIndex="2">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -69,7 +61,7 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="TAHUN" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Label fx:id="v_makanan" alignment="CENTER" maxWidth="1.7976931348623157E308" text="TAHUN" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -79,52 +71,47 @@
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets top="10.0" />
                      </GridPane.margin>
                   </ImageView>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
-                     <GridPane.margin>
-                        <Insets top="10.0" />
-                     </GridPane.margin>
-                  </ImageView>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Makanan">
+                  <Label fx:id="v_tahun_title" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Usia">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Habitat" GridPane.columnIndex="1">
+                  <Label fx:id="v_habitat_title" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Habitat" GridPane.columnIndex="1">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Usia" GridPane.columnIndex="2">
+                  <Label fx:id="v_makanan_title" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Makanan" GridPane.columnIndex="2">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Penyebaran" GridPane.columnIndex="3">
+                  <Label fx:id="v_penyebaran_title" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Penyebaran" GridPane.columnIndex="3">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Jumlah" GridPane.columnIndex="4">
+                  <Label fx:id="v_jumlah_title" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Jumlah" GridPane.columnIndex="4">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="EKOR" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                  <Label fx:id="v_jumlah_ket" alignment="CENTER" maxWidth="1.7976931348623157E308" text="EKOR" GridPane.columnIndex="4" GridPane.rowIndex="2">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="v_tahun" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0" GridPane.rowIndex="1">
                      <font>
                         <Font name="Leelawadee UI" size="53.0" />
                      </font>
@@ -134,8 +121,14 @@
                         <Font name="Leelawadee UI" size="53.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                </children>
             </GridPane>
+            <TextArea fx:id="v_keterangan" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextArea>
          </children>
       </GridPane>
    </center>
