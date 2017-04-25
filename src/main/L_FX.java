@@ -21,11 +21,6 @@ public class L_FX extends Application {
     public void start(Stage stage) throws Exception {
         
         Parent root = FXMLLoader.load(getClass().getResource("/view/v_home.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("/view/v_fauna.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("v_faunaExpand.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("/view/v_faunaExpand.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("/view/v_itemff.fxml"));
-        //Parent root = FXMLLoader.load(getClass().getResource("/view/v_itemffDetail.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("/css/v_home.css").toExternalForm());
         stage.setScene(scene);

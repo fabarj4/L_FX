@@ -22,7 +22,7 @@ and open the template in the editor.
 .mylistview,
 .mylistview .list-cell:even,
 .mylistview .list-cell:odd{
-    -fx-background-color: #f0f4c3;
+    -fx-background-color: #ffffff;
 }
 
 .mylistview .list-cell:even:focused,
